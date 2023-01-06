@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#p1 {background-color:rgba(0, 0, 255, 1);}
+#p2 {background-color:rgb(255, 255, 0);}
+</style>
+</head>
+<body>
+<h1>Define Colors With Opacity</h1>
+<p id="p1">Blue</p>
+<p id="p2">Yellow</p>
+</body>
+</html>
+
+https://www.w3schools.com/css/tryit.asp?filename=trycss3_color_opacity
