@@ -21,36 +21,36 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Set up JDK 14
+    - name: Set up JDK 17
       uses: actions/setup-java@v3
       with:
-        java-version: '14'
+        java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - name: Test Run
+    - name: The Test Run
       if: always()
       run: mvn clean test -DfileName=AllTestRunner.xml
       continue-on-error: true
       
-    - name: Get Allure history
-      uses: actions/checkout@v2
-      if: always()
-      continue-on-error: true
-      with:
-          ref: gh-pages
-          path: gh-pages
+#     - name: Get Allure history
+#       uses: actions/checkout@v2
+#       if: always()
+#       continue-on-error: true
+#       with:
+#           ref: AllurePagesForBuild
+#           path: AllurePagesForBuild
 
-    - name: Allure Report action from marketplace
+    - name: Allure Report Action
       uses: simple-elf/allure-report-action@master
       if: always()
       id: allure-report
       with:
         allure_results: ./target/allure-results
-        gh_pages: gh-pages
+        gh_pages: AllurePagesForBuild
         allure_report: ./target/allure-report
         allure_history: ./target/allure-history
     
-    - name: Deploy report page to Github Pages
+    - name: Deploy Report to Github-Pages
       if: always()
       uses: peaceiris/actions-gh-pages@v3
       with:
