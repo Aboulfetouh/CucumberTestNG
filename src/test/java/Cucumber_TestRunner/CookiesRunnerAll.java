@@ -4,6 +4,7 @@ import OrangehrmLive_Pageclass.baseclass;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(features = "src/test/resources/Cucumber_Features", glue = {
-		"Cucumber_StepDefinitions" }, tags = "@CookiesChallenge", plugin = { "pretty", "html:target/cucumber-reports.html" })
+		"Cucumber_StepDefinitions" }, tags = "@CookiesChallenge", plugin = { "pretty",
+				"html:target/cucumber-reports.html" })
 public class CookiesRunnerAll extends baseclass {
 }
