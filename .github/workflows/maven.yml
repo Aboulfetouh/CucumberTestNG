@@ -31,6 +31,11 @@ jobs:
       if: always()
       run: mvn clean test -DfileName='ParallelTestRunner.xml'
       continue-on-error: true
+
+    - name: Manuall > Allure Report Action
+      if: always()
+      run: allure generate -c target/allure-results -o target/allure-report
+      continue-on-error: true
       
     - name: Get Allure history
       uses: actions/checkout@v2
@@ -42,15 +47,15 @@ jobs:
 #         AllurePagesForBuild
 
 
-    - name: Allure Report Action
-      uses: simple-elf/allure-report-action@master
-      if: always()
-      id: allure-report
-      with:
-        allure_results: ./target/allure-results
-        gh_pages: gh-pages
-        allure_report: ./target/allure-report
-        allure_history: ./target/allure-history
+#     - name: Allure Report Action
+#       uses: simple-elf/allure-report-action@master
+#       if: always()
+#       id: allure-report
+#       with:
+#         allure_results: ./target/allure-results
+#         gh_pages: gh-pages
+#         allure_report: ./target/allure-report
+#         allure_history: ./target/allure-history
     
 #     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
 #     - name: Update dependency graph
