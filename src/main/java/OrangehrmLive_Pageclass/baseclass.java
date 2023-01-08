@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -42,7 +43,8 @@ public class baseclass extends AbstractTestNGCucumberTests {
 		if (BrowserName.equalsIgnoreCase("Chrome")) {
 			// Creating an object of ChromeDriver
 			WebDriverManager.chromedriver().setup();
-			setDriver(new ChromeDriver());
+			ChromeOptions options = new ChromeOptions().setHeadless(true);
+			setDriver(new ChromeDriver(options));
 			System.out.println("Lunching 'Chrome' as a web-browser");
 		} else if (BrowserName.equalsIgnoreCase("Firefox")) {
 			// Creating an object of FirefoxDriver
