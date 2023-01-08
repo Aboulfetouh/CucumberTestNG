@@ -1,2 +1,5 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Sun Jan 08 02:47:41 GMT 2023","Sun Jan 08 02:47:46 GMT 2023","4722","Suite","ParallelTestRunner","Cucumber_TestRunner.RunAllFeatures","Cucumber_TestRunner.RunAllFeatures","runScenario","Runs Cucumber Scenarios",""
+"passed","Sun Jan 08 15:25:18 GMT 2023","Sun Jan 08 15:25:23 GMT 2023","4688","Suite","ParallelTestRunner","Cucumber_TestRunner.RunAllFeatures","Cucumber_TestRunner.RunAllFeatures","runScenario","Runs Cucumber Scenarios",""
+"passed","Sun Jan 08 15:24:53 GMT 2023","Sun Jan 08 15:25:01 GMT 2023","8182","Suite","ParallelTestRunner","Cucumber_TestRunner.RunAllFeatures","Cucumber_TestRunner.RunAllFeatures","runScenario","Runs Cucumber Scenarios",""
+"passed","Sun Jan 08 15:25:01 GMT 2023","Sun Jan 08 15:25:11 GMT 2023","9479","Suite","ParallelTestRunner","Cucumber_TestRunner.RunAllFeatures","Cucumber_TestRunner.RunAllFeatures","runScenario","Runs Cucumber Scenarios",""
+"passed","Sun Jan 08 15:24:41 GMT 2023","Sun Jan 08 15:24:52 GMT 2023","11558","Suite","ParallelTestRunner","Cucumber_TestRunner.RunAllFeatures","Cucumber_TestRunner.RunAllFeatures","runScenario","Runs Cucumber Scenarios",""
