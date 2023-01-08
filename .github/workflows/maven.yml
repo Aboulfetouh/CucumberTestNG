@@ -27,9 +27,9 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
-    - name: The Test Run
+    - name: The Test Runner
       if: always()
-      run: mvn clean test -DfileName='ParallelTestRunner.xml'
+      run: mvn clean test -DfileName='AllTestRunner.xml'
       continue-on-error: true
       
     - name: Get Allure History
