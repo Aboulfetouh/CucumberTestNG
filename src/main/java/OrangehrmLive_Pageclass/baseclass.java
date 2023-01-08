@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -27,7 +28,7 @@ public class baseclass extends AbstractTestNGCucumberTests {
 
 	@BeforeMethod
 	public void browserSetup() throws Exception {
-		setupDriver(getBrowser());
+		setupDriver(getBrowser(), getHeadlessMode());
 		System.out.println("@BeforeMethod Has Started.");
 		getDriver().manage().deleteAllCookies();
 		getDriver().manage().window().maximize();
@@ -39,18 +40,21 @@ public class baseclass extends AbstractTestNGCucumberTests {
 		getDriver().manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 	}
 
-	void setupDriver(String BrowserName) throws Exception {
+	void setupDriver(String BrowserName, boolean headless) throws Exception {
 		if (BrowserName.equalsIgnoreCase("Chrome")) {
 			// Creating an object of ChromeDriver
 			WebDriverManager.chromedriver().setup();
-			ChromeOptions options = new ChromeOptions().setHeadless(true);
+			ChromeOptions options = new ChromeOptions().setHeadless(headless);
 			setDriver(new ChromeDriver(options));
-			System.out.println("Lunching 'Chrome' as a web-browser");
+			System.out.println("Lunching '" + BrowserName + "' as a web-browser");
+			System.out.println("Headless-Mode property value is >> " + headless);
 		} else if (BrowserName.equalsIgnoreCase("Firefox")) {
 			// Creating an object of FirefoxDriver
 			WebDriverManager.firefoxdriver().setup();
-			setDriver(new FirefoxDriver());
-			System.out.println("Lunching 'Firefox' as a web-browser");
+			FirefoxOptions options = new FirefoxOptions().setHeadless(headless);
+			setDriver(new FirefoxDriver(options));
+			System.out.println("Lunching '" + BrowserName + "' as a web-browser");
+			System.out.println("Headless-Mode property value is >> " + headless);
 		}
 		// Exception handling in case both of the above conditions are not met
 		else {

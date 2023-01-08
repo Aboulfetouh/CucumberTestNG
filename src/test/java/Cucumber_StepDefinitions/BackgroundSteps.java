@@ -21,11 +21,6 @@ public class BackgroundSteps {
 		base.getURL(URL);
 	}
 
-	@Given("We open our home URL")
-	public void we_open_our_home_url() throws IOException, Exception {
-		base.getURL(getOrangehrmLiveURL());
-	}
-
 	@When("User enters {string} and {string}")
 	public void user_enters_username_and_password(String user, String pass) {
 		landing.fillUsername(user);

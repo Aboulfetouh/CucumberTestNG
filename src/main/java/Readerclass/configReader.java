@@ -17,19 +17,11 @@ public class configReader {
 		return getPropertyObjects().getProperty("browser");
 	}
 
-	public static String getOrangehrmLiveURL() throws IOException {
-		return getPropertyObjects().getProperty("orangehrmliveURL");
+	public static boolean getHeadlessMode() throws IOException {
+		return Boolean.valueOf(getPropertyObjects().getProperty("headlessMode"));
 	}
 
-	public static String getOrangeDashboardURL() throws IOException {
-		return getPropertyObjects().getProperty("orangedashboardURL");
-	}
-
-	public static String getLetskodeitURL() throws IOException {
-		return getPropertyObjects().getProperty("letskodeitURL");
-	}
-
-	public static String getJQueryURL() throws IOException {
-		return getPropertyObjects().getProperty("jqueryURL");
-	}
+//	public static String getOrangehrmLiveURL() throws IOException {
+//		return getPropertyObjects().getProperty("orangehrmliveURL");
+//	}
 }
