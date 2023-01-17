@@ -1,2 +1,3 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Sun Jan 08 16:47:21 GMT 2023","Sun Jan 08 16:47:31 GMT 2023","10416","Suite","SequentialTestRunner","Cucumber_TestRunner.RunAllFeatures","Cucumber_TestRunner.RunAllFeatures","runScenario","Runs Cucumber Scenarios",""
+"broken","Tue Jan 17 13:39:53 GMT 2023","Tue Jan 17 13:39:53 GMT 2023","2","Suite","SequentialTestRunner","Cucumber_TestRunner.RunAllFeatures","Cucumber_TestRunner.RunAllFeatures","browserSetup","browserSetup",""
+"skipped","Tue Jan 17 13:39:53 GMT 2023","Tue Jan 17 13:39:53 GMT 2023","1","Suite","SequentialTestRunner","Cucumber_TestRunner.RunAllFeatures","Cucumber_TestRunner.RunAllFeatures","runScenario","Runs Cucumber Scenarios",""

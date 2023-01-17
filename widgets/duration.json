@@ -1,1 +1,1 @@
-[{"uid":"e74f8d2e1b498dc1","name":"Runs Cucumber Scenarios","time":{"start":1673196441129,"stop":1673196451545,"duration":10416},"status":"passed","severity":"normal"}]
+[{"uid":"9b67ff94a1ec1edd","name":"browserSetup","time":{"start":1673962793370,"stop":1673962793372,"duration":2},"status":"broken","severity":"normal"},{"uid":"1646d56aeefd7d24","name":"Runs Cucumber Scenarios","time":{"start":1673962793391,"stop":1673962793392,"duration":1},"status":"skipped","severity":"normal"}]
