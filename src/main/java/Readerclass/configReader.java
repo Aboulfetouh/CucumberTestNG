@@ -1,27 +1,29 @@
 package Readerclass;
 
-import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
+
+import net.bytebuddy.asm.Advice.This;
 
 public class configReader {
 
 	public static Properties getPropertyObjects() throws IOException {
-		FileInputStream FP = new FileInputStream("resources//config.properties");
+		InputStream FP = This.class.getClassLoader().getResourceAsStream("config.properties");
 		Properties prop = new Properties();
 		prop.load(FP);
 		return prop;
 	}
 
-	public static String getBrowser() throws IOException {
-		return getPropertyObjects().getProperty("browser");
+	public static String getStringValue(String keyVaule) throws IOException {
+		return getPropertyObjects().getProperty(keyVaule);
 	}
 
-	public static boolean getHeadlessMode() throws IOException {
-		return Boolean.valueOf(getPropertyObjects().getProperty("headlessMode"));
+	public static int getIntValue(String keyVaule) throws IOException {
+		return Integer.parseInt(getPropertyObjects().getProperty(keyVaule));
 	}
 
-//	public static String getOrangehrmLiveURL() throws IOException {
-//		return getPropertyObjects().getProperty("orangehrmliveURL");
-//	}
+	public static boolean getBooleanValue(String keyVaule) throws IOException {
+		return Boolean.valueOf(getPropertyObjects().getProperty(keyVaule));
+	}
 }

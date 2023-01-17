@@ -1,6 +1,5 @@
 package Cucumber_StepDefinitions;
 
-import static Readerclass.directorySourceReader.*;
 import static Readerclass.configReader.*;
 import java.io.IOException;
 import OrangehrmLive_Pageclass.baseclass;
@@ -34,6 +33,7 @@ public class BackgroundSteps {
 
 	@Then("^Takes a (.*)$")
 	public void takes_a_screenshot(String ScreenshotName) throws Exception {
-		screenshot.takeFullScreenshot(baseclass.getDriver(), getScreeshotsDirectory(), ScreenshotName);
+		screenshot.takeFullScreenshot(baseclass.getDriver(),
+				getStringValue("resourcesDir") + getStringValue("screeshotDir"), ScreenshotName);
 	}
 }

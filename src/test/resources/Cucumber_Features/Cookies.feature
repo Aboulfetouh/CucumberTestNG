@@ -12,7 +12,7 @@ Feature: Testing the Login functionality using cookies
 
     Examples: 
       | URL                                        | username | password | Elements | Cookies            | DashURL                                                                 | Screenshot                      |
-      | https://opensource-demo.orangehrmlive.com/ | Admin    | admin123 |        6 | SessionCookies.txt | https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index | loginAndStoreCookies Screenshot |
+      | https://opensource-demo.orangehrmlive.com/ | Admin    | admin123 |        7 | SessionCookies.txt | https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index | loginAndStoreCookies Screenshot |
 
   @loginThroughCookies
   Scenario Outline: Checking login using stored Cookies
@@ -24,4 +24,4 @@ Feature: Testing the Login functionality using cookies
 
     Examples: 
       | URL                                        | Elements | Cookies            | DashURL                                                                 | Screenshot                     |
-      | https://opensource-demo.orangehrmlive.com/ |        6 | SessionCookies.txt | https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index | loginThroughCookies Screenshot |
+      | https://opensource-demo.orangehrmlive.com/ |        7 | SessionCookies.txt | https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index | loginThroughCookies Screenshot |

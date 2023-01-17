@@ -1,10 +1,10 @@
 package Cucumber_StepDefinitions;
 
-import static Readerclass.directorySourceReader.*;
 import java.io.IOException;
 import org.testng.Assert;
 import OrangehrmLive_Pageclass.baseclass;
 import OrangehrmLive_Pageclass.dashboardPage;
+import static Readerclass.configReader.*;
 import UtilitiesClass.CookiesManager;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -24,7 +24,7 @@ public class CookiesSteps {
 
 	@And("^Stores the session (.*)$")
 	public void stores_the_session_cookies(String Cookies) throws IOException {
-		manager.storeCookiesToText(getCookiesDirectory(), Cookies);
+		manager.storeCookiesToText(getStringValue("resourcesDir") + getStringValue("cookiesDir"), Cookies);
 	}
 
 	@And("^User opens the (.*)$")
@@ -34,7 +34,7 @@ public class CookiesSteps {
 
 	@When("^User loads the session (.*)$")
 	public void user_loads_the_session_cookies(String Cookies) throws IOException {
-		manager.loadCookies(getCookiesDirectory(), Cookies);
+		manager.loadCookies(getStringValue("resourcesDir") + getStringValue("cookiesDir"), Cookies);
 	}
 
 	@Then("User should be able to see the DashBoard page {int}")
