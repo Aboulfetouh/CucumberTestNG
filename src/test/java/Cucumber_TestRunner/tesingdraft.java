@@ -1,29 +1,24 @@
 package Cucumber_TestRunner;
 
-import java.io.IOException;
-
 import org.testng.annotations.Test;
 
-import Readerclass.configReader;
-import Readerclass.dConfigReader;
-import Readerclass.xlsxReader;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import OrangehrmLive_Pageclass.baseclass;
+import static Readerclass.configReader.*;
+import UtilitiesClass.DirectoryManager;
+import UtilitiesClass.TakeScreenShot;
 
-public class tesingdraft {
+public class tesingdraft extends baseclass {
 
 	@Test
-	public void setUp() throws Exception {
-		System.out.println(dConfigReader.getStringValue("config.properties", "testString1"));
-		System.out.println(dConfigReader.getIntValue("config.properties", "testInteger1"));
-		System.out.println(dConfigReader.getBooleanValue("config.properties", "testBoolean1"));
-		System.out.println(dConfigReader.getStringValue("config.properties", "testString2"));
-		System.out.println(dConfigReader.getIntValue("config.properties", "testInteger2"));
-		System.out.println(dConfigReader.getBooleanValue("config.properties", "testBoolean2"));
-		System.out.println("***************************************");
-		System.out.println(configReader.getStringValue("testString1"));
-		System.out.println(configReader.getIntValue("testInteger1"));
-		System.out.println(configReader.getBooleanValue("testBoolean1"));
-		System.out.println(configReader.getStringValue("testDataFile"));
-		System.out.println(configReader.getIntValue("sheetIndex"));
+	public void setDir() throws Exception {
+		baseclass base = new baseclass();
+		TakeScreenShot screenshot = new TakeScreenShot();
+		DirectoryManager dir = new DirectoryManager();
+		base.getURL("https://www.google.com/");
+//		String browserslist[] = getStringValue("browsers").split(",");
+//		for (int i = 0; i < browserslist.length; i++) 
+//			System.out.println(browserslist[i]);
+		screenshot.takeFullScreenshot(baseclass.getDriver(),
+				getStringValue("TestoOutputDir") + getStringValue("screeshotDir"), "Passed AlhamudleAllah--");
 	}
 }

@@ -19,9 +19,7 @@ public class baseclass extends AbstractTestNGCucumberTests {
 
 	protected static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
-	public static WebDriver getDriver() {
-		return driver.get();
-	}
+	public static WebDriver getDriver() {return driver.get();}
 
 	public void setDriver(WebDriver driver) {
 		baseclass.driver.set(driver);

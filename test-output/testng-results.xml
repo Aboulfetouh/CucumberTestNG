@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-01-22T15:55:01 EET" name="Default suite" finished-at="2023-01-22T15:55:09 EET" duration-ms="7854">
+    <groups>
+    </groups>
+    <test started-at="2023-01-22T15:55:01 EET" name="Default test" finished-at="2023-01-22T15:55:09 EET" duration-ms="7854">
+      <class name="Cucumber_TestRunner.tesingdraft">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Cucumber_TestRunner.tesingdraft@4d1bf319]" started-at="2023-01-22T15:55:01 EET" name="setUpClass" finished-at="2023-01-22T15:55:01 EET" duration-ms="109" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1dba4e06]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:Cucumber_TestRunner.tesingdraft@4d1bf319]" started-at="2023-01-22T15:55:01 EET" name="browserSetup" finished-at="2023-01-22T15:55:05 EET" duration-ms="4178" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method signature="setDir()[pri:0, instance:Cucumber_TestRunner.tesingdraft@4d1bf319]" started-at="2023-01-22T15:55:05 EET" name="setDir" finished-at="2023-01-22T15:55:08 EET" duration-ms="2711" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDir -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Cucumber_TestRunner.tesingdraft@4d1bf319]" started-at="2023-01-22T15:55:08 EET" name="tearDown" finished-at="2023-01-22T15:55:09 EET" duration-ms="728" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Cucumber_TestRunner.tesingdraft@4d1bf319]" started-at="2023-01-22T15:55:09 EET" name="tearDownClass" finished-at="2023-01-22T15:55:09 EET" duration-ms="17" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- Cucumber_TestRunner.tesingdraft -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

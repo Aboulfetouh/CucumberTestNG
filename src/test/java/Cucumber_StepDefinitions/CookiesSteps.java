@@ -24,7 +24,7 @@ public class CookiesSteps {
 
 	@And("^Stores the session (.*)$")
 	public void stores_the_session_cookies(String Cookies) throws IOException {
-		manager.storeCookiesToText(getStringValue("resourcesDir") + getStringValue("cookiesDir"), Cookies);
+		manager.storeCookiesToText(getStringValue("TestoOutputDir") + getStringValue("cookiesDir"), Cookies);
 	}
 
 	@And("^User opens the (.*)$")
@@ -34,7 +34,7 @@ public class CookiesSteps {
 
 	@When("^User loads the session (.*)$")
 	public void user_loads_the_session_cookies(String Cookies) throws IOException {
-		manager.loadCookies(getStringValue("resourcesDir") + getStringValue("cookiesDir"), Cookies);
+		manager.loadCookies(getStringValue("TestoOutputDir") + getStringValue("cookiesDir"), Cookies);
 	}
 
 	@Then("User should be able to see the DashBoard page {int}")

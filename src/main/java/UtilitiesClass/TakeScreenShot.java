@@ -23,19 +23,20 @@ public class TakeScreenShot {
 				.takeScreenshot(driver);
 		ImageIO.write(myScreenshot.getImage(), "JPG",
 				new File(directoryMan.createFileWithDir(directory, filename) + timestamp() + ".jpg"));
-		System.out.println("A Full screenshot is being taken now || The name and location of the screenshot is [ " + directory+filename + " "
-				+ timestamp() + " ]");
+		System.out.println("A Full screenshot is being taken now || The name and location of the screenshot is [ "
+				+ directory + "/"+ filename + " " + timestamp() + " ]");
 	}
 
 	public void takeElementScreenshot(WebDriver driver, String directory, String filename, WebElement webElement)
 			throws Exception {
 		DirectoryManager directoryMan = new DirectoryManager();
-		Screenshot myScreenshot = new AShot().coordsProvider(new WebDriverCoordsProvider()).shootingStrategy(ShootingStrategies.scaling(1f)).takeScreenshot(driver,
-				webElement);
+		Screenshot myScreenshot = new AShot().coordsProvider(new WebDriverCoordsProvider())
+				.shootingStrategy(ShootingStrategies.scaling(1f)).takeScreenshot(driver, webElement);
 		ImageIO.write(myScreenshot.getImage(), "PNG",
 				new File(directoryMan.createFileWithDir(directory, filename) + timestamp() + ".png"));
-		System.out.println("A screenshot for a specific element is being taken now || The name and location of the screenshot is [ " + directory+filename + " "
-				+ timestamp() + " ]");
+		System.out.println(
+				"A screenshot for a specific element is being taken now || The name and location of the screenshot is [ "
+						+ directory + filename + " " + timestamp() + " ]");
 	}
 
 	public static String timestamp() {

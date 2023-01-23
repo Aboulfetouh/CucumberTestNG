@@ -11,7 +11,7 @@ Feature: Testing the Login functionality
     @positive
     Examples: 
       | URL                                        | username | password | Elements | Screenshot                   |
-      | https://opensource-demo.orangehrmlive.com/ | Admin    | admin123 |        6 | Positive Login Functionality |
+      | https://opensource-demo.orangehrmlive.com/ | Admin    | admin123 |        7 | Positive Login Functionality |
 
   Scenario Outline: Checking login with invalid credentials
     Given User opened the Home <URL>
